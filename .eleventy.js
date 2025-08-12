@@ -1,3 +1,4 @@
+const Webmentions = require("eleventy-plugin-webmentions");
 module.exports = function(eleventyConfig) {
 	eleventyConfig.addPassthroughCopy("./src/css/");
 	eleventyConfig.addWatchTarget("./src/css/");
