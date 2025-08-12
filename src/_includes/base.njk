@@ -1,12 +1,18 @@
 <!DOCTYPE html>
-<html>	
+<html lang="en">	
 	<head>
 		<meta charset "UTF-8" />
 		<title>{{ title }}</title>
 		<link rel="me" href="https://github.com/amino47" />
+		<link rel="stylesheet" href="{{ '/css/style.css' | url }}">
 	</head>
 	<body>
-		<h1>{{ title }}</h1>
-		{{ content | safe }}
+		  {% include "nav.njk" %}
+		<header>
+			<h1>{{ title }}</h1>
+		</header>
+		<main>
+			{{ content | safe }}
+		</main>
 	</body>
 </html>
