@@ -4,6 +4,11 @@ module.exports = function(eleventyConfig) {
 
 	eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
 
+	eleventyConfig.addPlugin(Webmentions, {
+		domain: "ashellm.net",
+		token: "bLYhlV6taMuQuxTVAsIvWg",
+	});
+
 	return {
 		dir: {
 			input: "src",
