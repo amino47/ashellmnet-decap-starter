@@ -19,7 +19,8 @@
   "homepage": "https://github.com/amino47/ashellmnet-decap-starter#readme",
   "description": "",
   "dependencies": {
-    "@11ty/eleventy": "^3.1.2"
+    "@11ty/eleventy": "^3.1.2",
+    "@chrisburnell/eleventy-cache-webmentions": "^2.1.9"
   },
   "devDependencies": {
     "eleventy-plugin-webmentions": "^2.1.0"
