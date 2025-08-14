@@ -1,5 +1,5 @@
 ---
-title: Homepage
+title: Amina Shellman
 layout: base.njk
 ---
 <div class="h-card">
