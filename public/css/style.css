@@ -13,7 +13,9 @@ body {
   padding: 5vh clamp(1rem, 5vw, 3rem) 1rem;
   font-family: system-ui, sans-serif;
   line-height: 1.5;
-  color: #222;
+  color: #7EE081; 
+/*  background-color: #1B2021; */
+  background-color: #273043;
 }
 
 body > * {
@@ -77,7 +79,7 @@ article * + * {
 }
 
 a {
-  color: navy;
+  color: #009FB7;
   text-underline-offset: 0.08em;
 }
 
