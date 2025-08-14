@@ -16,11 +16,5 @@
 		<main>
 			{{ content | safe }}
 		</main>
-		<footer>
-			<span>Webmentions: {%- set currentPostMentionCount = webmentions | webmentionCountForPage -%} </span>
-			<div class="webmentions">
-				{%- set currentPostMentions = webmentions | webmentionsForPage -%}
-			</div>
-		</footer>
 	</body>
 </html>

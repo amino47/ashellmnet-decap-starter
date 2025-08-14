@@ -11,5 +11,25 @@ layout: base.njk
 			{{ content | safe }}
 		</div>
 	</article>
+	<footer>
+	{% set replies = webmentions | getWebmentionsByTypes(['mention-of', 'in-reply-to']) %}
+		{% for webmention in webmentions %}
+			<div>
+			{% if webmention | getWebmentionType  === "mention-of", "in-reply-to" %}
+				<div>
+				<p>
+					{{webmention | getWebmentionContent}} was said by {{webmention | getWebmentionSource}} on {{getWebmentionPublished}}.
+				</p>
+				</div>
+			{% endif %}
+
+			{% if webmention | getWebmentionType == "like-of" %}
+				<div>
+					<p>{{webmention | getWebmentionSource}} liked this post.</p>
+				</div>
+			{% endif %}
+			</div>
+		{% endfor %}
+	</footer>
 </main>
 
