@@ -20,7 +20,8 @@
   "description": "",
   "dependencies": {
     "@11ty/eleventy": "^3.1.2",
-    "eleventy-plugin-icons": "^4.5.4"
+    "eleventy-plugin-icons": "^4.5.4",
+    "feather-icons": "^4.29.2"
   },
   "devDependencies": {
     "@chrisburnell/eleventy-cache-webmentions": "^2.1.9",
