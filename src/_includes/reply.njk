@@ -1,0 +1,23 @@
+---
+layout: base.njk
+---
+
+<main>
+	<article class="h-entry">
+		<a href="{{ page.url }}" class="u-url">This post</a>
+		<p>Published by: <a class="p-author h-card" href="https://ashellm.net">Amina Shellman</a></p>
+		<a class="u-in-reply-to" href="{{replyto}}">Original Post</a>
+		<div class="e-content">
+			{{ content | safe }}
+		</div>
+	</article>
+	<footer>
+	
+		{% for webmention in webmentions %}
+			<!-- Loop through all webmentions on a given page -->
+			{{ webmention.author.name }} sent this page a {{ webmention | getType }}
+		{% endfor %}
+
+	</footer>
+</main>
+
