@@ -6,7 +6,7 @@ module.exports = {
 			// Get this page's Webmentions as an Array (based on the URL)
 			const webmentionsForUrl = getWebmentions({
 				domain: "https://ashellm.net",
-				feed: "https://webmention.io/api/mentions.jf2?domain=example.com&per-page=9001&token=bLYhlV6taMuQuxTVAsIvWg",
+				feed: "https://webmention.io/api/mentions.jf2?domain=ashellm.net&per-page=9001&token=bLYhlV6taMuQuxTVAsIvWg",
 				key: "children"
 			}, "https://ashelllm.net" + data.page.url)
 
