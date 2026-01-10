@@ -3,7 +3,6 @@ title: Amina Shellman
 layout: base.njk
 ---
 <div class="h-card">
-<a class="p-name u-url" href="https://ashellm.net/">Amina Shellman</a>
 <a rel="me" class="u-url" href="https://github.com/amino47/">{% icon "feather:github" %}</a>
 </div>
 
