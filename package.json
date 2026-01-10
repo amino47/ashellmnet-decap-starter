@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "eleventy",
-    "start": "eleventy --serve"
+    "build": "NODE_ENV=production npx @11ty/eleventy",
+    "build:local": "NODE_ENV=production netlify build",
+    "start": "netlify dev"
   },
   "repository": {
     "type": "git",
@@ -25,6 +26,9 @@
   },
   "devDependencies": {
     "@chrisburnell/eleventy-cache-webmentions": "^2.1.9",
-    "eleventy-plugin-webmentions": "^2.1.0"
+    "eleventy-plugin-webmentions": "^2.1.0",
+    "lodash": "^4.17.21",
+    "netlify-plugin-cache-folder": "^0.0.8",
+    "node-fetch": "^3.3.2"
   }
 }
