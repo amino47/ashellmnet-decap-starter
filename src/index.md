@@ -1,5 +1,5 @@
 ---
-title: Amina Shellman
+title: Riley Shellman
 layout: base.njk
 ---
 <div class="h-card">
