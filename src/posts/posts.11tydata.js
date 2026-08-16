@@ -1,14 +1,16 @@
  const { getWebmentions, getPublished } = require("@chrisburnell/eleventy-cache-webmentions")
 
+const webmentionToken = process.env.WEBMENTION_TOKEN
+
 module.exports = {
 	eleventyComputed: {
 		webmentions: (data) => {
 			// Get this page's Webmentions as an Array (based on the URL)
 			const webmentionsForUrl = getWebmentions({
 				domain: "https://ashellm.net",
-				feed: "https://webmention.io/api/mentions.jf2?domain=ashellm.net&per-page=9001&token=bLYhlV6taMuQuxTVAsIvWg",
+				feed: `https://webmention.io/api/mentions.jf2?domain=ashellm.net&per-page=9001&token=${webmentionToken}`,
 				key: "children"
-			}, "https://ashelllm.net" + data.page.url)
+			}, "https://ashellm.net" + data.page.url)
 
 			// If there are Webmentions for this page
 			if (webmentionsForUrl.length) {

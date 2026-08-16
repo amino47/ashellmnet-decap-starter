@@ -21,6 +21,7 @@
   "description": "",
   "dependencies": {
     "@11ty/eleventy": "^3.1.2",
+    "dotenv": "^17.4.2",
     "eleventy-plugin-icons": "^4.5.4",
     "feather-icons": "^4.29.2"
   },
