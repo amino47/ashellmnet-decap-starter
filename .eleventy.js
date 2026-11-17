@@ -1,6 +1,5 @@
 require('dotenv').config()
 
-const pluginWebmentions = require("@chrisburnell/eleventy-cache-webmentions")
 const pluginIcons =  require('eleventy-plugin-icons')
 
 module.exports = function(eleventyConfig) {
@@ -8,13 +7,6 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addWatchTarget("./src/css/");
 
 	const webmentionToken = process.env.WEBMENTION_TOKEN
-
-	eleventyConfig.addPlugin(pluginWebmentions, {
-		// These 3 fields are all required!
-		domain: "https://ashellm.net",
-		feed: `https://webmention.io/api/mentions.jf2?domain=ashellm.net&per-page=9001&token=${webmentionToken}`,
-		key: "children"
-	})
 
 	eleventyConfig.addPlugin(pluginIcons, 
 		{
