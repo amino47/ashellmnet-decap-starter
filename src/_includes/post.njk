@@ -13,12 +13,9 @@ layout: base.njk
 		</div>
 	</article>
 	<footer>
-	
-		{% for webmention in webmentions %}
-			<!-- Loop through all webmentions on a given page -->
-			{{ webmention.author.name }} sent this page a {{ webmention | getType }}
-		{% endfor %}
-
-	</footer>
+    <div data-webmention-target="https://example.com/post/"></div>
+    <link rel="stylesheet" href="https://webmention.io/assets/webmention-render.css">
+    <script src="https://webmention.io/js/webmention-render.js" defer></script>
+  </footer>
 </main>
 
